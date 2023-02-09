@@ -1,0 +1,43 @@
+print('Tax Calculator')
+def min():
+    month_inc = float(input("Enter your Monthly Income: Php "))
+    ann_inc = float(month_inc) * 12
+    print("Your annual income is: Php", ann_inc)
+  
+    if ann_inc <= 250000:
+        tax = 0
+        print("Annual tax = Php", tax)
+        monthly = 0
+        print("Monthly Tax = Php", monthly)
+        
+    elif ann_inc > 250000 and ann_inc <= 400000:
+        tax = float((ann_inc - 250000) * .15)
+        print("Annual tax = Php", tax)
+        monthly = tax / 12
+        print("Monthly Tax = Php", monthly)
+        
+    elif ann_inc > 400000 and ann_inc <= 800000:
+        tax = float(((ann_inc - 400000) * .20) + 22500)
+        print("Annual tax = Php", tax)
+        monthly = tax / 12
+        print("Monthly Tax = Php", monthly)
+          
+    elif ann_inc > 800000 and ann_inc <= 2000000:
+        tax = float(((ann_inc - 800000) * .25) + 102500)
+        print("Annual tax = Php", tax)
+        monthly = tax / 12
+        print("Monthly Tax = Php", monthly)
+        
+    elif ann_inc > 2000000 and ann_inc <= 8000000:
+        tax = float(((ann_inc - 2000000) * .30) + 402500)
+        print("Annual tax = Php", tax)
+        monthly = tax / 12
+        print("Monthly Tax = Php", monthly)
+        
+    elif ann_inc > 8000000:
+        tax = float(((ann_inc - 8000000) * .35) + 2202500)
+        print("Annual tax = Php", tax)
+        monthly = tax / 12
+        print("Monthly Tax = Php", monthly)
+        
+min()
